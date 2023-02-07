@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { AverageWheelRadius } from './ui/TableWithCalculations/AverageWheelRadius';
+import { AverageGearRadius } from './ui/TableWithCalculations/AverageGearRadius';
+import { TableWithCalculations } from './ui/TableWithCalculations/TableWithCalculations';
+import { InitialTable } from './ui/InitialTable';
 
-function App() {
+
+export type PropsType = {
+
+}
+
+export const App = () => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Расчёт размеров начальных конусов гипоидных зубчатых колес и величин, определяющих их взаимное положение (линейные размеры в мм)</p>
+      <div>
+        {/* Исходные данные */}
+        <InitialTable />
+        {/* Таблица с расчетами */}
+        <TableWithCalculations />
+      </div>
     </div>
   );
 }
-
-export default App;
